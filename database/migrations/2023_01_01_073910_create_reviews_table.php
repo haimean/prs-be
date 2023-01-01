@@ -19,7 +19,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->foreignIdFor(User::class);
-            $table->point('points');
+            $table->integer('points');
             $table->string('description');
             $table->foreignIdFor(Brand::class);
             $table->timestamps();
