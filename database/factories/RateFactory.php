@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Brand;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,8 @@ class RateFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name(),
+            'description' => $this->faker->text(50),
         ];
     }
 }

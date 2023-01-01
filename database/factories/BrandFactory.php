@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\School;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,9 @@ class BrandFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name(),
+            'school_id' => School::inRandomOrder()->first(),
+            'address' => $this->faker->address(),
         ];
     }
 }
